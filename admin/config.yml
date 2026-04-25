@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Summary", name: "summary", widget: "string", hint: "Short description shown in the blog index" }
+      - { label: "Category", name: "category", widget: "select", options: ["Data & AI", "Smart Cities", "IoT & Infrastructure", "R&D & Innovation Funding", "Company News"] }
+      - { label: "Body", name: "body", widget: "markdown" }
