@@ -1,0 +1,14 @@
+title: Data Undigital
+description: Data & Innovation Advisory
+url: "https://www.data-undigital.com"
+baseurl: ""
+
+permalink: /blog/:year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
