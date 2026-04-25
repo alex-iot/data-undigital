@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Data Undigital Ltd — Data & Innovation Advisory</title>
+<meta name="description" content="Data Undigital helps public and private organisations design, fund and deliver complex data-enabled products, platforms and programmes. Deep expertise in IoT, AI, data infrastructure and collaborative R&D.">
+<meta name="keywords" content="data advisory, IoT consulting, data spaces, smart cities, Horizon Europe, collaborative R&D, digital infrastructure, connected infrastructure, data platforms, innovation strategy, productisation, EU funding, UK innovation">
+<meta name="author" content="Data Undigital Ltd">
+<link rel="canonical" href="https://www.data-undigital.com">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.data-undigital.com">
+<meta property="og:title" content="Data Undigital Ltd — Data & Innovation Advisory">
+<meta property="og:description" content="From data complexity to deployable innovation. We help organisations design, fund and deliver complex data-enabled products, platforms and programmes.">
+<meta property="og:site_name" content="Data Undigital Ltd">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Data Undigital Ltd — Data & Innovation Advisory">
+<meta name="twitter:description" content="From data complexity to deployable innovation. IoT, AI, data infrastructure and collaborative R&D advisory.">
+
+<!-- Google Analytics GA4 - loads only after cookie consent -->
+<script>
+  window.GA_ID = 'G-92W187BHTT';
+  function loadGA(){
+    if(window.gaLoaded) return;
+    window.gaLoaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_ID;
+    s.async = true;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', window.GA_ID, {anonymize_ip: true});
+  }
+  if(localStorage.getItem('cookie_consent') === 'accepted') loadGA();
+</script>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Data Undigital Ltd",
+  "url": "https://www.data-undigital.com",
+  "description": "Data Undigital helps public and private organisations design, fund and deliver complex data-enabled products, platforms and programmes.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Suite 9, Dalton House, 60 Windsor Avenue",
+    "addressLocality": "London",
+    "postalCode": "SW19 2RR",
+    "addressCountry": "GB"
+  },
+  "areaServed": ["GB", "EU"],
+  "knowsAbout": ["IoT", "Data Spaces", "Smart Cities", "Horizon Europe", "Data Infrastructure", "AI", "Collaborative R&D", "Digital Innovation"],
+  "sameAs": ["https://www.linkedin.com/in/gluhak"]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#111210;--ink-mid:#4a4d47;--ink-soft:#8a8d87;
+  --cream:#f5f3ee;--white:#ffffff;
+  --moss:#2d4a3e;--moss-mid:#3d6b5a;--moss-light:#e8f0ed;
+  --border:rgba(17,18,16,0.1);--border-light:rgba(17,18,16,0.06);
+  --serif:'Inter',system-ui,sans-serif;--sans:'Inter',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);font-size:16px;line-height:1.7;overflow-x:hidden}
+
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border-light);padding:0 3rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo-mark{display:flex;align-items:center;gap:0.75rem;text-decoration:none}
+.logo-square{width:32px;height:32px;background:var(--moss);display:flex;align-items:center;justify-content:center}
+.logo-square span{font-family:var(--serif);font-size:1rem;color:var(--white);font-style:italic}
+.logo-text{font-family:var(--sans);font-size:0.95rem;font-weight:500;color:var(--ink);letter-spacing:-0.01em}
+.logo-text small{display:block;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:400;margin-top:-2px}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;font-size:0.82rem;color:var(--ink-mid);letter-spacing:0.01em;transition:color 0.2s}
+.nav-links a:hover{color:var(--moss)}
+.nav-cta{background:var(--moss) !important;color:var(--white) !important;padding:0.45rem 1.1rem !important;border-radius:2px;font-size:0.78rem !important;font-weight:500 !important;letter-spacing:0.04em !important}
+.nav-cta:hover{background:var(--moss-mid) !important}
+
+#hero{background:var(--cream);padding:5rem 3rem;display:grid;grid-template-columns:1.1fr 0.9fr;gap:4rem;align-items:center;border-bottom:1px solid var(--border)}
+.hero-label{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--moss);font-weight:500;margin-bottom:1.25rem}
+.hero-h1{font-family:var(--serif);font-size:clamp(2.2rem,3.5vw,3.2rem);line-height:1.1;letter-spacing:-0.02em;color:var(--ink);margin-bottom:1.5rem}
+.hero-h1 em{font-style:italic;color:var(--moss-mid)}
+.hero-body{font-size:1rem;color:var(--ink-mid);line-height:1.8;max-width:480px;margin-bottom:2rem;font-weight:300}
+.hero-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.btn-solid{background:var(--moss);color:var(--white);padding:0.75rem 1.75rem;text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;border-radius:2px;transition:background 0.2s;display:inline-block}
+.btn-solid:hover{background:var(--moss-mid)}
+.btn-line{color:var(--moss);text-decoration:none;font-size:0.82rem;border-bottom:1px solid var(--moss);padding-bottom:1px;transition:opacity 0.2s}
+.btn-line:hover{opacity:0.65}
+.hero-right{display:flex;flex-direction:column}
+.client-block{padding:1.25rem 0;border-bottom:1px solid var(--border)}
+.client-block:first-child{border-top:1px solid var(--border)}
+.client-label{font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);font-weight:500;margin-bottom:0.2rem}
+.client-name{font-family:var(--serif);font-size:1.05rem;color:var(--ink)}
+.client-desc{font-size:0.8rem;color:var(--ink-soft);margin-top:0.15rem;line-height:1.5}
+
+#services{padding:5rem 3rem;background:var(--white)}
+.section-head{margin-bottom:3rem;max-width:600px}
+.eyebrow{font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--moss);font-weight:500;margin-bottom:0.75rem}
+.section-h{font-family:var(--serif);font-size:clamp(1.7rem,2.5vw,2.3rem);letter-spacing:-0.02em;line-height:1.15;color:var(--ink);margin-bottom:0.875rem}
+.section-body{font-size:0.95rem;color:var(--ink-mid);line-height:1.75;font-weight:300}
+.services-list{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border)}
+.svc{padding:2rem 2rem 2rem 0;border-bottom:1px solid var(--border);border-right:1px solid var(--border);transition:background 0.2s}
+.svc:nth-child(even){padding-right:0;padding-left:2rem;border-right:none}
+.svc:hover{background:var(--cream)}
+.svc-num{font-family:var(--serif);font-size:0.85rem;color:var(--ink-soft);font-style:italic;margin-bottom:0.75rem}
+.svc-name{font-size:1rem;font-weight:500;color:var(--ink);margin-bottom:0.5rem;line-height:1.3}
+.svc-desc{font-size:0.83rem;color:var(--ink-mid);line-height:1.7;font-weight:300}
+.svc-tags{margin-top:0.875rem;display:flex;flex-wrap:wrap;gap:0.35rem}
+.stag{font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--moss);background:var(--moss-light);padding:0.18rem 0.5rem;border-radius:1px;font-weight:500}
+.svc-crosscut{grid-column:1/-1;padding:1.5rem 0;border-bottom:none;border-right:none;background:none !important}
+.svc-crosscut p{font-size:0.85rem;color:var(--ink-soft);line-height:1.75;font-weight:300;font-style:italic;max-width:680px}
+.sector-line{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.sector-line p{font-size:0.83rem;color:var(--ink-mid);line-height:1.75;font-weight:300}
+
+#work{padding:5rem 3rem;background:var(--cream)}
+.work-intro{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:3rem}
+.work-intro-right{font-size:0.88rem;color:var(--ink-mid);line-height:1.75;font-weight:300}
+.cases{display:flex;flex-direction:column;gap:1px;background:var(--border)}
+.case{background:var(--white);padding:2rem 2.25rem;display:grid;grid-template-columns:140px 1fr auto;gap:2rem;align-items:start;transition:background 0.2s}
+.case:hover{background:var(--cream)}
+.case-client{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--moss);font-weight:500;padding-top:0.2rem;line-height:1.5}
+.case-title{font-family:var(--serif);font-size:1.1rem;color:var(--ink);margin-bottom:0.5rem;line-height:1.25}
+.case-desc{font-size:0.83rem;color:var(--ink-mid);line-height:1.7;font-weight:300}
+.case-tag{font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:500;white-space:nowrap;padding-top:0.25rem;text-align:right}
+.advisory-note{padding:1.25rem 2.25rem;background:var(--white);border-top:none}
+.advisory-note p{font-size:0.78rem;color:var(--ink-soft);line-height:1.7;font-style:italic}
+
+#about{padding:5rem 3rem;background:var(--moss)}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem}
+.about-eyebrow{font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);font-weight:500;margin-bottom:0.875rem}
+.about-h{font-family:var(--serif);font-size:clamp(1.6rem,2.2vw,2.1rem);color:var(--white);letter-spacing:-0.02em;line-height:1.2;margin-bottom:1.5rem}
+.about-p{font-size:0.9rem;color:rgba(255,255,255,0.6);line-height:1.85;font-weight:300;margin-bottom:1rem}
+.about-p strong{color:rgba(255,255,255,0.85);font-weight:500}
+.about-creds{margin-top:1.75rem}
+.cred{display:flex;gap:0.875rem;padding:0.75rem 0;border-bottom:1px solid rgba(255,255,255,0.07);align-items:flex-start}
+.cred:last-child{border-bottom:none}
+.cred-line{width:20px;height:1px;background:rgba(255,255,255,0.25);margin-top:0.6rem;flex-shrink:0}
+.cred-text{font-size:0.82rem;color:rgba(255,255,255,0.45);line-height:1.6;font-weight:300}
+.team-wrap{display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,0.08)}
+.team-member{background:rgba(255,255,255,0.04);padding:1.5rem 1.75rem}
+.tm-name{font-family:var(--serif);font-size:1.05rem;color:var(--white);margin-bottom:0.2rem}
+.tm-role{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);font-weight:500;margin-bottom:0.75rem}
+.tm-bio{font-size:0.82rem;color:rgba(255,255,255,0.5);line-height:1.7;font-weight:300}
+
+#contact{padding:5rem 3rem;background:var(--white)}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem}
+.contact-intro{font-size:0.95rem;color:var(--ink-mid);line-height:1.75;font-weight:300;margin-bottom:2rem}
+.contact-details{display:flex;flex-direction:column;gap:1.25rem}
+.cd-row{display:flex;flex-direction:column;gap:0.2rem}
+.cd-label{font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);font-weight:500}
+.cd-val{font-size:0.9rem;color:var(--ink)}
+.cd-val a{color:var(--moss);text-decoration:none}
+.cd-val a:hover{text-decoration:underline}
+
+/* Email obfuscation */
+.eml{unicode-bidi:bidi-override;direction:rtl;font-size:0.9rem;color:var(--moss);cursor:text;letter-spacing:0}
+
+.form-wrap{display:flex;flex-direction:column;gap:1.1rem}
+.fg{display:flex;flex-direction:column;gap:0.35rem}
+.flabel{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:500}
+.finput{border:1px solid var(--border);background:var(--cream);padding:0.7rem 0.875rem;font-family:var(--sans);font-size:0.88rem;color:var(--ink);border-radius:2px;outline:none;width:100%;transition:border-color 0.2s}
+.finput:focus{border-color:var(--moss)}
+textarea.finput{min-height:110px;resize:vertical}
+.fsub{background:var(--moss);color:var(--white);border:none;padding:0.8rem 1.75rem;font-family:var(--sans);font-size:0.78rem;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;cursor:pointer;border-radius:2px;align-self:flex-start;transition:background 0.2s}
+.fsub:hover{background:var(--moss-mid)}
+
+footer{background:var(--ink);padding:1.75rem 3rem;display:flex;align-items:center;justify-content:space-between}
+.footer-brand{font-family:var(--serif);font-size:0.95rem;color:rgba(255,255,255,0.35);font-style:italic}
+.footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.2);letter-spacing:0.02em}
+.footer-nav{display:flex;gap:1.5rem;list-style:none}
+.footer-nav a{font-size:0.73rem;color:rgba(255,255,255,0.3);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+.footer-nav a:hover{color:rgba(255,255,255,0.7)}
+
+/* Cookie banner */
+#cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--ink);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.08)}
+#cookie-banner p{font-size:0.78rem;color:rgba(255,255,255,0.55);line-height:1.6;max-width:680px;margin:0}
+#cookie-banner a{color:var(--moss-mid);text-decoration:underline}
+.cookie-actions{display:flex;gap:0.75rem;flex-shrink:0}
+.cookie-accept{background:var(--moss);color:var(--white);border:none;padding:0.5rem 1.25rem;font-family:var(--sans);font-size:0.75rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:background 0.2s}
+.cookie-accept:hover{background:var(--moss-mid)}
+.cookie-decline{background:none;color:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.15);padding:0.5rem 1.25rem;font-family:var(--sans);font-size:0.75rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all 0.2s}
+.cookie-decline:hover{color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.3)}
+@media(max-width:768px){#cookie-banner{padding:1rem 1.5rem}.cookie-actions{width:100%}.cookie-accept,.cookie-decline{flex:1;text-align:center}}
+
+/* Hamburger menu */
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-toggle span{display:block;width:22px;height:1.5px;background:var(--ink);transition:all 0.2s}
+
+@media(max-width:768px){
+  nav{padding:0 1.5rem;position:sticky}
+  .nav-toggle{display:flex}
+  .nav-links{
+    display:none;flex-direction:column;gap:0;
+    position:absolute;top:64px;left:0;right:0;
+    background:var(--white);border-bottom:1px solid var(--border);
+    padding:0.5rem 0;
+  }
+  .nav-links.open{display:flex}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:0.75rem 1.5rem;font-size:0.9rem;border-bottom:1px solid var(--border-light)}
+  .nav-cta{background:none !important;color:var(--moss) !important;border-radius:0 !important;padding:0.75rem 1.5rem !important}
+
+  #hero{grid-template-columns:1fr;padding:3rem 1.5rem;gap:2.5rem}
+  .hero-h1{font-size:2rem}
+  .hero-body{max-width:100%}
+
+  #services{padding:3rem 1.5rem}
+  .services-list{grid-template-columns:1fr}
+  .svc{padding:1.5rem 0;border-right:none}
+  .svc:nth-child(even){padding-left:0;border-right:none}
+  .svc-crosscut{padding:1.25rem 0}
+
+  #work{padding:3rem 1.5rem}
+  .work-intro{grid-template-columns:1fr;gap:1rem;margin-bottom:2rem}
+  .case{grid-template-columns:1fr;gap:0.5rem;padding:1.5rem}
+  .case-tag{text-align:left}
+  .advisory-note{padding:1rem 1.5rem}
+
+  #about{padding:3rem 1.5rem}
+  .about-inner{grid-template-columns:1fr;gap:2.5rem}
+
+  #contact{padding:3rem 1.5rem}
+  .contact-inner{grid-template-columns:1fr;gap:2.5rem}
+
+  footer{padding:1.5rem;flex-direction:column;gap:1rem;text-align:center}
+  .footer-nav{flex-wrap:wrap;justify-content:center;gap:1rem}
+  .footer-copy{order:3}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#hero" class="logo-mark">
+    <div class="logo-square"><span>D</span></div>
+    <div class="logo-text">
+      Data Undigital
+      <small>Data &amp; Innovation Advisory</small>
+    </div>
+  </a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="#services" onclick="this.closest('.nav-links').classList.remove('open')">Services</a></li>
+    <li><a href="#work" onclick="this.closest('.nav-links').classList.remove('open')">Work</a></li>
+    <li><a href="#about" onclick="this.closest('.nav-links').classList.remove('open')">About</a></li>
+    <li><a href="#contact" class="nav-cta" onclick="this.closest('.nav-links').classList.remove('open')">Get in touch</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div>
+    <p class="hero-label">Data &amp; Innovation Advisory</p>
+    <h1 class="hero-h1">From data complexity<br>to <em>deployable innovation</em></h1>
+    <p class="hero-body">Data Undigital helps public and private organisations design, fund and deliver complex data-enabled products, platforms and programmes. We combine deep expertise in IoT, AI, data infrastructure and collaborative R&amp;D with hands-on experience in productisation, commercialisation and real-world deployment.</p>
+    <div class="hero-actions">
+      <a href="#work" class="btn-solid">See our work</a>
+      <a href="#contact" class="btn-line">Start a conversation</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="client-block">
+      <p class="client-label">City Networks</p>
+      <p class="client-name">Open &amp; Agile Smart Cities</p>
+      <p class="client-desc">European urban innovation programmes · data spaces · city interoperability</p>
+    </div>
+    <div class="client-block">
+      <p class="client-label">Innovation Agencies</p>
+      <p class="client-name">Digital Catapult</p>
+      <p class="client-desc">International R&amp;D strategy · Horizon Europe · IoT commercialisation</p>
+    </div>
+    <div class="client-block">
+      <p class="client-label">Technology Centres</p>
+      <p class="client-name">CENSIS</p>
+      <p class="client-desc">5G innovation · data aggregation · data space business cases</p>
+    </div>
+    <div class="client-block">
+      <p class="client-label">Research &amp; Innovation</p>
+      <p class="client-name">Connected Places Catapult</p>
+      <p class="client-desc">Urban testbeds · strategic landscape mapping</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-head">
+    <p class="eyebrow">What we do</p>
+    <h2 class="section-h">Focused support for complex data-enabled innovation</h2>
+    <p class="section-body">We work with organisations developing digital infrastructure, connected products and collaborative innovation programmes. Our role can range from strategic advisor and technical lead to productisation partner, consortium builder or programme delivery lead.</p>
+  </div>
+  <div class="services-list">
+    <div class="svc">
+      <p class="svc-num">01</p>
+      <p class="svc-name">Data &amp; Digital Infrastructure Strategy</p>
+      <p class="svc-desc">We help organisations design the data foundations for complex digital products, platforms and programmes — from interoperability and governance to data-sharing models, metadata, APIs and data space architecture.</p>
+      <div class="svc-tags"><span class="stag">Data Spaces</span><span class="stag">Interoperability</span><span class="stag">Governance</span><span class="stag">APIs</span></div>
+    </div>
+    <div class="svc">
+      <p class="svc-num">02</p>
+      <p class="svc-name">IoT, Platforms &amp; Connected Infrastructure</p>
+      <p class="svc-desc">We advise on IoT systems, real-time data platforms and connected infrastructure — helping organisations move from technical concept to scalable architecture, pilot deployment and commercial proposition.</p>
+      <div class="svc-tags"><span class="stag">IoT</span><span class="stag">Edge / Cloud</span><span class="stag">Real-Time Data</span><span class="stag">Connected Infrastructure</span></div>
+    </div>
+    <div class="svc">
+      <p class="svc-num">03</p>
+      <p class="svc-name">Innovation Strategy &amp; Commercialisation</p>
+      <p class="svc-desc">We help organisations assess, shape and commercialise data-enabled products and services — from opportunity assessment and MVP definition to partner strategy, business cases and go-to-market pathways.</p>
+      <div class="svc-tags"><span class="stag">Productisation</span><span class="stag">MVP Strategy</span><span class="stag">Business Cases</span><span class="stag">Go-to-Market</span></div>
+    </div>
+    <div class="svc">
+      <p class="svc-num">04</p>
+      <p class="svc-name">Collaborative R&amp;D &amp; Programme Leadership</p>
+      <p class="svc-desc">We help organisations shape, fund and deliver collaborative R&amp;D programmes — from funding strategy and call analysis to proposal development, consortium building, technical work package design and programme coordination.</p>
+      <div class="svc-tags"><span class="stag">Horizon Europe</span><span class="stag">Innovate UK</span><span class="stag">Consortium Building</span><span class="stag">Programme Leadership</span></div>
+    </div>
+    <div class="svc svc-crosscut">
+      <p>Across all engagements, we combine technical depth with stakeholder engagement, facilitation and programme governance — helping complex partnerships align around credible plans and deliverable outcomes.</p>
+    </div>
+  </div>
+  <div class="sector-line">
+    <p>We bring particular experience across smart cities, energy, water, EV infrastructure, urban testbeds, connected places and digital innovation ecosystems.</p>
+  </div>
+</section>
+
+<section id="work">
+  <div class="work-intro">
+    <div>
+      <p class="eyebrow">Selected work</p>
+      <h2 class="section-h">Selected work across infrastructure, cities and innovation systems</h2>
+    </div>
+    <p class="work-intro-right">Our work sits at the intersection of data infrastructure, connected systems, collaborative R&amp;D and real-world deployment — helping public bodies, innovation agencies and commercial partners turn complex ideas into structured, actionable initiatives.</p>
+  </div>
+  <div class="cases">
+    <div class="case">
+      <p class="case-client">Open &amp; Agile Smart Cities</p>
+      <div>
+        <p class="case-title">European Urban Innovation Programmes</p>
+        <p class="case-desc">Strategic advisory and technical programme leadership across European initiatives supporting city digital innovation. Work includes pre-commercial procurement design, capacity building for cities and regions, data space pilot evaluation, and interoperability framework development.</p>
+      </div>
+      <p class="case-tag">Ongoing</p>
+    </div>
+    <div class="case">
+      <p class="case-client">Digital Catapult</p>
+      <div>
+        <p class="case-title">International R&amp;D Strategy &amp; Horizon Europe Support</p>
+        <p class="case-desc">Supported international R&amp;D strategy and Horizon Europe positioning, including funding landscape analysis, call prioritisation, consortium shaping and proposal quality assurance across technology areas.</p>
+      </div>
+      <p class="case-tag">2023–2024</p>
+    </div>
+    <div class="case">
+      <p class="case-client">CENSIS · Glasgow 5G Innovation Region</p>
+      <div>
+        <p class="case-title">Data Aggregation Strategy &amp; Data Space Business Cases</p>
+        <p class="case-desc">Developed data aggregation strategy and data space business cases for a multi-stakeholder 5G innovation programme. Work included analysis of UK and European data-sharing frameworks, governance models and emerging data space architectures.</p>
+      </div>
+      <p class="case-tag">2024</p>
+    </div>
+    <div class="case">
+      <p class="case-client">Connected Places Catapult</p>
+      <div>
+        <p class="case-title">European &amp; UK Testbed Landscape Mapping</p>
+        <p class="case-desc">Mapped European and UK testbed initiatives to inform strategic planning for a new connected places initiative, including analysis of operating models, governance approaches and positioning opportunities.</p>
+      </div>
+      <p class="case-tag">2026</p>
+    </div>
+  </div>
+  <div class="advisory-note">
+    <p>Our work is complemented by personal advisory roles in urban innovation and water-sector data sharing, including Queen Elizabeth Olympic Park / SHIFT London and Stream: Unlocking Water Data.</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-inner">
+    <div>
+      <p class="about-eyebrow">About us</p>
+      <h2 class="about-h">A specialist consultancy for complex digital innovation programmes</h2>
+      <p class="about-p">Data Undigital Ltd is a UK-registered advisory practice working across data infrastructure, IoT, connected systems and collaborative R&amp;D. We help organisations shape <strong>technically credible programmes</strong> and create the conditions for them to be funded, adopted and delivered.</p>
+      <p class="about-p">Our experience spans research labs, national innovation programmes, industrial clients, European R&amp;D and venture development. Our advisory work is informed by first-hand founder experience: building a data platform company, developing a real-time urban data exchange into a SaaS proposition, raising early-stage funding, and navigating the realities of pilots, partnerships and commercial adoption.</p>
+      <p class="about-p">We combine technical architecture, strategic programme design and stakeholder engagement — allowing us to contribute not only to the technology, but also to the partnerships, governance and delivery models around it.</p>
+      <div class="about-creds">
+        <div class="cred"><div class="cred-line"></div><p class="cred-text">20+ collaborative R&amp;D programmes delivered across Europe and the UK</p></div>
+        <div class="cred"><div class="cred-line"></div><p class="cred-text">First-hand founder experience building and commercialising a data platform company</p></div>
+        <div class="cred"><div class="cred-line"></div><p class="cred-text">IoT leadership across research, industry and national innovation programmes</p></div>
+        <div class="cred"><div class="cred-line"></div><p class="cred-text">European network across cities, research organisations, innovation agencies and technology partners</p></div>
+        <div class="cred"><div class="cred-line"></div><p class="cred-text">Expert reviewer for the European Commission and Research Council of Norway</p></div>
+        <div class="cred"><div class="cred-line"></div><p class="cred-text">Lead architect of SmartSantander, one of Europe's largest IoT smart city testbeds at the time</p></div>
+      </div>
+    </div>
+    <div>
+      <div class="team-wrap">
+        <div class="team-member">
+          <p class="tm-name">Alex Gluhak</p>
+          <p class="tm-role">Founder &amp; Director — Technical &amp; Strategic Lead</p>
+          <p class="tm-bio">Alex leads Data Undigital's technical and strategic advisory work. He brings deep expertise in IoT, AI, data-sharing platforms and collaborative R&amp;D, with experience across research, industry, national innovation programmes and technology venture development. He holds a PhD in Mobile Communications and works fluently in English and German.</p>
+        </div>
+        <div class="team-member">
+          <p class="tm-name">Monica Gluhak</p>
+          <p class="tm-role">Director — Stakeholder Engagement &amp; Collaboration</p>
+          <p class="tm-bio">Monica leads Data Undigital's stakeholder engagement and collaboration capability. She brings expertise in facilitation, collaborative process design, organisational development and qualitative research. With an MSc in Human Resource Management and CIPD qualification, she helps ensure technically complex programmes are shaped around the people, institutions and partnerships needed to make them work.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-inner">
+    <div>
+      <p class="eyebrow">Get in touch</p>
+      <h2 class="section-h">Let's discuss what you're trying to build</h2>
+      <p class="contact-intro">Whether you are shaping a new programme, developing a proposal, assessing a data opportunity or looking for a technical and strategic partner, we would be glad to hear from you.</p>
+      <div class="contact-details">
+        <div class="cd-row">
+          <span class="cd-label">Email</span>
+          <!-- Email obfuscated: reversed text via CSS, scrapers read moc.latigidnu-atad@xela, humans see alex@data-undigital.com -->
+          <span class="cd-val"><span class="eml">moc.latigidnu-atad@xela</span></span>
+        </div>
+        <div class="cd-row">
+          <span class="cd-label">Web</span>
+          <span class="cd-val"><a href="https://www.data-undigital.com">www.data-undigital.com</a></span>
+        </div>
+        <div class="cd-row">
+          <span class="cd-label">LinkedIn</span>
+          <span class="cd-val"><a href="https://www.linkedin.com/in/gluhak">linkedin.com/in/gluhak</a></span>
+        </div>
+        <div class="cd-row">
+          <span class="cd-label">Registered in England &amp; Wales</span>
+          <span class="cd-val" style="font-size:0.82rem;color:var(--ink-soft)">Company no. 15026666 · VAT no. 454311124</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <form class="form-wrap" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        <div class="fg">
+          <label class="flabel">Name</label>
+          <input type="text" name="name" class="finput" placeholder="Your full name">
+        </div>
+        <div class="fg">
+          <label class="flabel">Organisation</label>
+          <input type="text" name="organisation" class="finput" placeholder="Company or institution">
+        </div>
+        <div class="fg">
+          <label class="flabel">Email</label>
+          <input type="email" name="email" class="finput" placeholder="you@organisation.com">
+        </div>
+        <div class="fg">
+          <label class="flabel">How can we help?</label>
+          <textarea name="message" class="finput" placeholder="Tell us about your project or challenge..."></textarea>
+        </div>
+        <button type="submit" class="fsub">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-brand">Data Undigital</span>
+  <ul class="footer-nav">
+    <li><a href="privacy.html">Privacy</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <span class="footer-copy">© 2026 Data Undigital Ltd. Registered in England &amp; Wales.</span>
+</footer>
+
+<!-- Cookie consent banner -->
+<div id="cookie-banner" style="display:none">
+  <p>We use cookies to understand how visitors use our site (Google Analytics). No personal data is shared with third parties. See our <a href="privacy.html">privacy policy</a> for details.</p>
+  <div class="cookie-actions">
+    <button class="cookie-decline" onclick="cookieDecline()">Decline</button>
+    <button class="cookie-accept" onclick="cookieAccept()">Accept</button>
+  </div>
+</div>
+
+<script>
+  // Show banner if no consent decision yet
+  if(!localStorage.getItem('cookie_consent')){
+    document.getElementById('cookie-banner').style.display='flex';
+  }
+  function cookieAccept(){
+    localStorage.setItem('cookie_consent','accepted');
+    document.getElementById('cookie-banner').style.display='none';
+    loadGA();
+  }
+  function cookieDecline(){
+    localStorage.setItem('cookie_consent','declined');
+    document.getElementById('cookie-banner').style.display='none';
+  }
+</script>
+
+</body>
+</html>
