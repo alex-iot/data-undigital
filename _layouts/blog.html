@@ -1,0 +1,55 @@
+---
+layout: default
+---
+<style>
+#blog-hero{background:var(--cream);padding:4rem 3rem;border-bottom:1px solid var(--border)}
+.blog-hero-inner{max-width:1200px;margin:0 auto}
+.blog-eyebrow{font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--moss);font-weight:500;margin-bottom:0.75rem}
+.blog-title{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:500;letter-spacing:-0.02em;line-height:1.15;color:var(--ink);margin-bottom:0.875rem}
+.blog-intro{font-size:0.95rem;color:var(--ink-mid);line-height:1.75;font-weight:300;max-width:560px}
+
+#blog-posts{padding:4rem 3rem;max-width:1200px;margin:0 auto}
+.posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.post-card{background:var(--white);border:1px solid var(--border);padding:1.75rem;transition:border-color 0.2s;text-decoration:none;display:block}
+.post-card:hover{border-color:var(--moss)}
+.post-card-cat{font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--moss);font-weight:500;margin-bottom:0.75rem}
+.post-card-title{font-size:1rem;font-weight:500;color:var(--ink);line-height:1.35;margin-bottom:0.625rem}
+.post-card-summary{font-size:0.82rem;color:var(--ink-mid);line-height:1.7;font-weight:300;margin-bottom:1rem}
+.post-card-date{font-size:0.72rem;color:var(--ink-soft);letter-spacing:0.04em}
+.no-posts{font-size:0.95rem;color:var(--ink-mid);font-weight:300}
+
+@media(max-width:768px){
+  #blog-hero{padding:3rem 1.5rem}
+  #blog-posts{padding:2.5rem 1.5rem}
+  .posts-grid{grid-template-columns:1fr}
+}
+</style>
+
+<section id="blog-hero">
+  <div class="blog-hero-inner">
+    <p class="blog-eyebrow">Insights</p>
+    <h1 class="blog-title">Thinking on data, innovation<br>and digital infrastructure</h1>
+    <p class="blog-intro">Perspectives from the Data Undigital team on data spaces, IoT, smart cities, collaborative R&amp;D and the realities of building data-enabled products and programmes.</p>
+  </div>
+</section>
+
+<section id="blog-posts">
+  {% if site.posts.size > 0 %}
+    <div class="posts-grid">
+      {% for post in site.posts %}
+        <a class="post-card" href="{{ post.url }}">
+          {% if post.category %}
+            <p class="post-card-cat">{{ post.category }}</p>
+          {% endif %}
+          <p class="post-card-title">{{ post.title }}</p>
+          {% if post.summary %}
+            <p class="post-card-summary">{{ post.summary }}</p>
+          {% endif %}
+          <p class="post-card-date">{{ post.date | date: "%d %B %Y" }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="no-posts">No posts yet — check back soon.</p>
+  {% endif %}
+</section>

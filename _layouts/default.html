@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }} — Data Undigital Ltd</title>
+<meta name="description" content="{{ page.summary | default: site.description }}">
+<link rel="canonical" href="{{ page.url | prepend: site.url }}">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ page.url | prepend: site.url }}">
+<meta property="og:title" content="{{ page.title }} — Data Undigital Ltd">
+<meta property="og:description" content="{{ page.summary | default: site.description }}">
+<meta property="og:site_name" content="Data Undigital Ltd">
+
+<!-- Google Analytics GA4 - loads only after cookie consent -->
+<script>
+  window.GA_ID = 'G-92W187BHTT';
+  function loadGA(){
+    if(window.gaLoaded) return;
+    window.gaLoaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_ID;
+    s.async = true;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', window.GA_ID, {anonymize_ip: true});
+  }
+  if(localStorage.getItem('cookie_consent') === 'accepted') loadGA();
+</script>
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#111210;--ink-mid:#4a4d47;--ink-soft:#8a8d87;
+  --cream:#f5f3ee;--white:#ffffff;
+  --moss:#2d4a3e;--moss-mid:#3d6b5a;--moss-light:#e8f0ed;
+  --border:rgba(17,18,16,0.1);--border-light:rgba(17,18,16,0.06);
+  --sans:'Inter',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);font-size:16px;line-height:1.7;overflow-x:hidden}
+
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border-light);padding:0 3rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo-mark{display:flex;align-items:center;gap:0.75rem;text-decoration:none}
+.logo-square{width:32px;height:32px;background:var(--moss);display:flex;align-items:center;justify-content:center}
+.logo-square span{font-size:1rem;color:var(--white);font-style:italic;font-family:var(--sans)}
+.logo-text{font-size:0.95rem;font-weight:500;color:var(--ink);letter-spacing:-0.01em}
+.logo-text small{display:block;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:400;margin-top:-2px}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;font-size:0.82rem;color:var(--ink-mid);letter-spacing:0.01em;transition:color 0.2s}
+.nav-links a:hover{color:var(--moss)}
+.nav-cta{background:var(--moss) !important;color:var(--white) !important;padding:0.45rem 1.1rem !important;border-radius:2px;font-size:0.78rem !important;font-weight:500 !important;letter-spacing:0.04em !important}
+.nav-cta:hover{background:var(--moss-mid) !important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-toggle span{display:block;width:22px;height:1.5px;background:var(--ink);transition:all 0.2s}
+
+footer{background:var(--ink);padding:1.75rem 3rem;display:flex;align-items:center;justify-content:space-between}
+.footer-brand{font-size:0.95rem;color:rgba(255,255,255,0.35);font-style:italic}
+.footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.2);letter-spacing:0.02em}
+.footer-nav{display:flex;gap:1.5rem;list-style:none}
+.footer-nav a{font-size:0.73rem;color:rgba(255,255,255,0.3);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+.footer-nav a:hover{color:rgba(255,255,255,0.7)}
+
+/* Cookie banner */
+#cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--ink);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.08)}
+#cookie-banner p{font-size:0.78rem;color:rgba(255,255,255,0.55);line-height:1.6;max-width:680px;margin:0}
+#cookie-banner a{color:var(--moss-mid);text-decoration:underline}
+.cookie-actions{display:flex;gap:0.75rem;flex-shrink:0}
+.cookie-accept{background:var(--moss);color:var(--white);border:none;padding:0.5rem 1.25rem;font-family:var(--sans);font-size:0.75rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;border-radius:2px}
+.cookie-decline{background:none;color:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.15);padding:0.5rem 1.25rem;font-family:var(--sans);font-size:0.75rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;border-radius:2px}
+
+{{ content }}
+
+@media(max-width:768px){
+  nav{padding:0 1.5rem;position:sticky}
+  .nav-toggle{display:flex}
+  .nav-links{display:none;flex-direction:column;gap:0;position:absolute;top:64px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);padding:0.5rem 0}
+  .nav-links.open{display:flex}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:0.75rem 1.5rem;font-size:0.9rem;border-bottom:1px solid var(--border-light)}
+  .nav-cta{background:none !important;color:var(--moss) !important;border-radius:0 !important;padding:0.75rem 1.5rem !important}
+  footer{padding:1.5rem;flex-direction:column;gap:1rem;text-align:center}
+  .footer-nav{flex-wrap:wrap;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo-mark">
+    <div class="logo-square"><span>D</span></div>
+    <div class="logo-text">
+      Data Undigital
+      <small>Data &amp; Innovation Advisory</small>
+    </div>
+  </a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="/#services" onclick="this.closest('.nav-links').classList.remove('open')">Services</a></li>
+    <li><a href="/#work" onclick="this.closest('.nav-links').classList.remove('open')">Work</a></li>
+    <li><a href="/#about" onclick="this.closest('.nav-links').classList.remove('open')">About</a></li>
+    <li><a href="/blog" onclick="this.closest('.nav-links').classList.remove('open')">Insights</a></li>
+    <li><a href="/#contact" class="nav-cta" onclick="this.closest('.nav-links').classList.remove('open')">Get in touch</a></li>
+  </ul>
+</nav>
+
+{{ content }}
+
+<footer>
+  <span class="footer-brand">Data Undigital</span>
+  <ul class="footer-nav">
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#work">Work</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/blog">Insights</a></li>
+    <li><a href="/#contact">Contact</a></li>
+    <li><a href="/privacy">Privacy</a></li>
+  </ul>
+  <span class="footer-copy">© 2026 Data Undigital Ltd. Registered in England &amp; Wales.</span>
+</footer>
+
+<div id="cookie-banner" style="display:none">
+  <p>We use cookies to understand how visitors use our site (Google Analytics). No personal data is shared with third parties. See our <a href="/privacy">privacy policy</a> for details.</p>
+  <div class="cookie-actions">
+    <button class="cookie-decline" onclick="cookieDecline()">Decline</button>
+    <button class="cookie-accept" onclick="cookieAccept()">Accept</button>
+  </div>
+</div>
+
+<script>
+  if(!localStorage.getItem('cookie_consent')){
+    document.getElementById('cookie-banner').style.display='flex';
+  }
+  function cookieAccept(){
+    localStorage.setItem('cookie_consent','accepted');
+    document.getElementById('cookie-banner').style.display='none';
+    loadGA();
+  }
+  function cookieDecline(){
+    localStorage.setItem('cookie_consent','declined');
+    document.getElementById('cookie-banner').style.display='none';
+  }
+</script>
+
+</body>
+</html>

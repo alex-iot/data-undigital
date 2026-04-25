@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<style>
+.post-wrap{max-width:720px;margin:0 auto;padding:4rem 2rem 6rem}
+.post-back{display:inline-block;font-size:0.78rem;color:var(--moss);text-decoration:none;letter-spacing:0.04em;margin-bottom:2.5rem;transition:opacity 0.2s}
+.post-back:hover{opacity:0.65}
+.post-cat{font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--moss);font-weight:500;margin-bottom:0.75rem}
+.post-title{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:500;letter-spacing:-0.02em;line-height:1.15;color:var(--ink);margin-bottom:0.875rem}
+.post-meta{font-size:0.78rem;color:var(--ink-soft);margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+.post-summary{font-size:1.05rem;color:var(--ink-mid);line-height:1.8;font-weight:300;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+
+/* Post body typography */
+.post-body{font-size:0.95rem;color:var(--ink-mid);line-height:1.85;font-weight:300}
+.post-body h2{font-size:1.15rem;font-weight:500;color:var(--ink);margin:2.5rem 0 0.75rem;letter-spacing:-0.01em}
+.post-body h3{font-size:1rem;font-weight:500;color:var(--ink);margin:2rem 0 0.5rem}
+.post-body p{margin-bottom:1.25rem}
+.post-body ul,.post-body ol{margin:0.5rem 0 1.25rem 1.5rem}
+.post-body li{margin-bottom:0.35rem}
+.post-body strong{font-weight:500;color:var(--ink)}
+.post-body a{color:var(--moss);text-decoration:underline}
+.post-body blockquote{border-left:2px solid var(--moss);padding:0.75rem 1.25rem;margin:1.5rem 0;background:var(--cream)}
+.post-body blockquote p{margin:0;font-style:italic}
+.post-body code{background:var(--cream);padding:0.1rem 0.35rem;border-radius:2px;font-size:0.85em}
+.post-body pre{background:var(--cream);padding:1rem;border-radius:2px;overflow-x:auto;margin-bottom:1.25rem}
+
+.post-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.post-footer-back{font-size:0.82rem;color:var(--moss);text-decoration:none;border-bottom:1px solid var(--moss);padding-bottom:1px}
+.post-cta{background:var(--moss);color:var(--white);padding:0.6rem 1.25rem;text-decoration:none;font-size:0.78rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;border-radius:2px;transition:background 0.2s}
+.post-cta:hover{background:var(--moss-mid)}
+
+@media(max-width:768px){.post-wrap{padding:2.5rem 1.5rem 4rem}}
+</style>
+
+<div class="post-wrap">
+  <a href="/blog" class="post-back">← Back to Insights</a>
+  {% if page.category %}
+    <p class="post-cat">{{ page.category }}</p>
+  {% endif %}
+  <h1 class="post-title">{{ page.title }}</h1>
+  <p class="post-meta">{{ page.date | date: "%d %B %Y" }} &nbsp;·&nbsp; Data Undigital Ltd</p>
+  {% if page.summary %}
+    <p class="post-summary">{{ page.summary }}</p>
+  {% endif %}
+  <div class="post-body">
+    {{ content }}
+  </div>
+  <div class="post-footer">
+    <a href="/blog" class="post-footer-back">← All insights</a>
+    <a href="/#contact" class="post-cta">Get in touch</a>
+  </div>
+</div>
