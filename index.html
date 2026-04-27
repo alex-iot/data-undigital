@@ -444,11 +444,11 @@ footer{background:var(--ink);padding:1.75rem 3rem;display:flex;align-items:cente
       </div>
     </div>
     <div>
-      <form class="form-wrap" name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact">
+      <form class="form-wrap" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="7be1b7d8-4713-4589-a43d-c9e0ee793536">
         <div class="fg">
           <label class="flabel">Name</label>
-          <input type="text" name="name" class="finput" placeholder="Your full name">
+          <input type="text" name="name" class="finput" placeholder="Your full name" required>
         </div>
         <div class="fg">
           <label class="flabel">Organisation</label>
@@ -456,11 +456,11 @@ footer{background:var(--ink);padding:1.75rem 3rem;display:flex;align-items:cente
         </div>
         <div class="fg">
           <label class="flabel">Email</label>
-          <input type="email" name="email" class="finput" placeholder="you@organisation.com">
+          <input type="email" name="email" class="finput" placeholder="you@organisation.com" required>
         </div>
         <div class="fg">
           <label class="flabel">How can we help?</label>
-          <textarea name="message" class="finput" placeholder="Tell us about your project or challenge..."></textarea>
+          <textarea name="message" class="finput" placeholder="Tell us about your project or challenge..." required></textarea>
         </div>
         <button type="submit" class="fsub">Send message</button>
       </form>
