@@ -22,23 +22,24 @@
 <meta name="twitter:title" content="Data Undigital | Data & Innovation Advisory">
 <meta name="twitter:description" content="From data complexity to deployable innovation. IoT, AI, data infrastructure and collaborative R&D advisory.">
 
-<!-- Google Analytics GA4 - loads only after cookie consent -->
+<!-- Google Analytics GA4 — Consent Mode v2 -->
 <script>
-  window.GA_ID = 'G-92W187BHTT';
-  function loadGA(){
-    if(window.gaLoaded) return;
-    window.gaLoaded = true;
-    var s = document.createElement('script');
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_ID;
-    s.async = true;
-    document.head.appendChild(s);
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    window.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', window.GA_ID, {anonymize_ip: true});
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag;
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    wait_for_update: 500
+  });
+  if(localStorage.getItem('cookie_consent') === 'accepted'){
+    gtag('consent', 'update', {analytics_storage: 'granted', ad_storage: 'granted'});
   }
-  if(localStorage.getItem('cookie_consent') === 'accepted') loadGA();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-92W187BHTT"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-92W187BHTT', {anonymize_ip: true});
 </script>
 
 <!-- Structured Data -->
@@ -469,7 +470,7 @@ footer{background:var(--ink);padding:1.75rem 3rem;display:flex;align-items:cente
       </div>
     </div>
     <div>
-      <form class="form-wrap" action="https://api.web3forms.com/submit" method="POST">
+      <form id="contact-form" class="form-wrap" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="7be1b7d8-4713-4589-a43d-c9e0ee793536">
         <div class="fg">
           <label class="flabel">Name</label>
@@ -516,19 +517,23 @@ footer{background:var(--ink);padding:1.75rem 3rem;display:flex;align-items:cente
 </div>
 
 <script>
-  // Show banner if no consent decision yet
   if(!localStorage.getItem('cookie_consent')){
     document.getElementById('cookie-banner').style.display='flex';
   }
   function cookieAccept(){
     localStorage.setItem('cookie_consent','accepted');
     document.getElementById('cookie-banner').style.display='none';
-    loadGA();
+    gtag('consent', 'update', {analytics_storage: 'granted', ad_storage: 'granted'});
   }
   function cookieDecline(){
     localStorage.setItem('cookie_consent','declined');
     document.getElementById('cookie-banner').style.display='none';
   }
+  document.getElementById('contact-form').addEventListener('submit', function(){
+    if(typeof gtag === 'function'){
+      gtag('event', 'contact_form_submit', {method: 'contact_section'});
+    }
+  });
 </script>
 
 </body>
