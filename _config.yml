@@ -1,12 +1,15 @@
 title: Data Undigital
 description: Data & Innovation Advisory
-url: "https://www.data-undigital.com"
+url: "https://data-undigital.com"
 baseurl: ""
 
 permalink: /blog/:year/:month/:day/:title/
 
 markdown: kramdown
 highlighter: rouge
+
+plugins:
+  - jekyll-sitemap
 
 exclude:
   - README.md
